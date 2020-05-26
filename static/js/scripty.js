@@ -54,8 +54,11 @@ $(document).ready(function(){
             url: '/postactivity',
             type: 'POST',
             data: form,
-            success: function(res){
-                console.log(res);
+            success: function(post){
+                console.log(post);
+                if(post){
+                    location.href = location.href
+                }
             }
         });
     });
